@@ -1,0 +1,76 @@
+<template name="sidebar">
+	<div id="sidebar" class="sidebar">
+		<div class="sidebar-menu nav-collapse">
+			<div class="divide-20"></div>
+			{{! SEARCH BAR }}
+			<div id="search-bar">
+				<input class="search" type="text" placeholder="Search"><i class="fa fa-search search-icon"></i>
+			</div>
+			{{! /SEARCH BAR }}
+			
+			{{! SIDEBAR QUICK-LAUNCH }}
+			{{! <div id="quicklaunch">
+			{{! /SIDEBAR QUICK-LAUNCH }}
+			
+			{{! SIDEBAR MENU }}
+			<ul>
+				<li>
+					<a href="/">
+					<i class="fa fa-tachometer fa-fw"></i> <span class="menu-text">Dashboard</span>
+					<span class="selected"></span>
+					</a>					
+				</li>
+
+				<li><a class="" href="#" target="_blank"><i class="fa fa-desktop fa-fw"></i> <span class="menu-text">Hiscores</span></a></li>
+
+				<li class="has-sub">
+					<a href="javascript:;" class="">
+					<i class="fa fa-pencil-square-o fa-fw"></i> <span class="menu-text">Droplogs <span class="badge pull-right">2</span></span>
+					<span class="arrow"></span>
+					</a>
+					<ul class="sub">
+						<li><a class="" href="#"><span class="sub-menu-text">Return to last</span></a></li>
+						<li><a class="" href="#"><span class="sub-menu-text">Show droplogs list</span></a></li>
+						<li class="has-sub-sub">
+							<a href="javascript:;" class=""><span class="sub-menu-text">Add new</span>
+							<span class="arrow"></span>
+							</a>
+							<ul class="sub-sub">
+								<li><a class="" href="#"><span class="sub-menu-text">Armadyl</span></a></li>
+								<li><a class="" href="#"><span class="sub-menu-text">Bandos</span></a></li>
+								<li><a class="" href="#"><span class="sub-menu-text">Zamorak</span></a></li>	
+								<li><a class="" href="#"><span class="sub-menu-text">Saradomin</span></a></li>
+								<li><a class="" href="#"><span class="sub-menu-text">Zulrah</span></a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+
+				<li class="has-sub">
+					<a href="javascript:;" class="">
+					<i class="fa fa-bar-chart-o fa-fw"></i> <span class="menu-text">XP Tracking</span>
+					<span class="arrow"></span>
+					</a>
+					<ul class="sub">
+						<li><a class="" href="#"><span class="sub-menu-text">Today</span></a></li>
+						<li><a class="" href="#"><span class="sub-menu-text">Weekly</span></a></li>
+						<li><a class="" href="#"><span class="sub-menu-text">Monthly</span></a></li>
+						<li><a class="" href="#"><span class="sub-menu-text">Yearly</span></a></li>
+						<li><a class="" href="#"><span class="sub-menu-text">All time</span></a></li>
+					</ul>
+				</li>
+
+				<li><a class="" href="/calendar"><i class="fa fa-calendar fa-fw"></i> 
+					<span class="menu-text">Calendar 
+						<span class="tooltip-error pull-right" title="" data-original-title="3 New Events">
+							<span class="label label-success">New</span>
+						</span>
+					</span>
+					</a>
+				</li>
+
+			</ul>
+			{{! /SIDEBAR MENU }}
+		</div>
+	</div>
+</template>

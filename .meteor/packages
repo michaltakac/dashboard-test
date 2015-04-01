@@ -1,0 +1,86 @@
+# Meteor packages used by this project, one per line.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-platform
+less
+jquery
+underscore
+accounts-password
+aldeed:collection2
+aldeed:autoform
+aldeed:simple-schema
+iron:router
+raix:handlebar-helpers
+matteodem:easy-security
+audit-argument-checks
+fastclick
+zimme:iron-router-active
+manuelschoebel:ms-seo
+browser-policy
+useraccounts:semantic-ui
+natestrauser:animate-css
+dburles:collection-helpers
+meteorhacks:fast-render
+twbs:bootstrap
+semantic:ui-css
+fortawesome:fontawesome
+
+#jQuery plugins
+natestrauser:jquery-scrollto
+copleykj:jquery-autosize
+goltfisch:jquery-backstretch
+andruschka:bootstrap-image-gallery
+mizzao:bootboxjs
+loftsteinn:bootstrap3-daterangepicker
+#NEEDED - bootstrap-fileupload
+benjaminrh:jquery-blockui
+benjaminrh:jquery-cookie
+mrt:jquery-easing
+jameslefrere:autoform-jquery-knob
+mrt:jquery-raty
+#NEEDED - jquery-slimScroll
+yogiben:autoform-file
+mrt:jquery-validate
+benmgreene:jquery-sparklines
+eisolomon:meteor-jquery-uniform
+
+# ----------------------------
+
+#Other plugins
+bigdsk:inputmask
+mrt:bootstrap-switch
+#NEEDED - bootstrap-wizard
+#NEEDED - bootstrap-wysiwyg that is NOT conflicting (disabling header navigation)
+mrt:bootstrap-colorpicker-2
+d3js:d3
+mrt:datatables
+rajit:bootstrap3-datepicker
+dbarrett:dropzonejs
+outatime:easy-pie-chart
+mrt:flot
+#NEEDED - flot-growraf
+rzymek:fullcalendar
+vazco:maps
+# ermini-notify is based on Gritter library
+crunya:ermini-notify 
+pcel:messenger
+isotope:isotope
+soncco:jqgrid
+aldeed:autoform-bs-datepicker
+mrt:justgage-package
+code-prettify
+natestrauser:select2
+#NEEDED - slidernav
+wollardj:timeago
+agnito:timeline
+sergeyt:typeahead
+#NEEDED - xcharts (or something nicer..)
+
+
+
+
+
+
+
