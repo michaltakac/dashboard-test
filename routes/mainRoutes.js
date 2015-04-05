@@ -8,6 +8,15 @@ if (Meteor.isClient) {
   //Router.onBeforeAction('dataNotFound', {except: ['join', 'signin']});
 }
 
+Router.route('/access', {
+	name: 'access',
+	action: function () {
+		this.layout('AccessLayout');
+		this.render('Access');
+		SEO.set({ title: 'Access - ' + Meteor.App.NAME });
+	}
+});
+
 Router.route('/', {
 	name: 'dashboard',
 	action: function () {
@@ -17,12 +26,12 @@ Router.route('/', {
 	}
 });
 
-Router.route('/access', {
-	name: 'access',
+Router.route('/user/8g47', {
+	name: 'user-profile',
 	action: function () {
-		this.layout('AccessLayout');
-		this.render('Access');
-		SEO.set({ title: 'Access - ' + Meteor.App.NAME });
+		this.layout('MainLayout');
+		this.render('UserProfile');
+		SEO.set({ title: 'Profile - ' + Meteor.App.NAME });
 	}
 });
 
