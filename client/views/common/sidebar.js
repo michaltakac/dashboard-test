@@ -22,7 +22,9 @@ var collapseSidebar = function () {
 
 Template['sidebar'].events({
 	'click .sidebar-menu .has-sub > a': function (event) {
-		var self = event.target;
+		event.preventDefault;
+
+		var self = event.currentTarget;
 		var last = jQuery('.has-sub.open', $('.sidebar-menu'));
 		last.removeClass("open");
         jQuery('.arrow', last).removeClass("open");
@@ -31,7 +33,7 @@ Template['sidebar'].events({
         var thisElement = $(this);
 		var slideOffeset = -200;
         var slideSpeed = 200;
-		
+
         var sub = jQuery(self).next();
         if (sub.is(":visible")) {
             jQuery('.arrow', jQuery(self)).removeClass("open");
@@ -53,8 +55,10 @@ Template['sidebar'].events({
             });
         }
 	},
-	'click .sidebar-menu .has-sub .sub .has-sub-sub > a': function() {
-		var self = event.target;
+	'click .sidebar-menu .has-sub .sub .has-sub-sub > a': function(event) {
+		event.preventDefault;
+		
+		var self = event.currentTarget;
 		var last = jQuery('.has-sub-sub.open', $('.sidebar-menu'));
         last.removeClass("open");
         jQuery('.arrow', last).removeClass("open");
