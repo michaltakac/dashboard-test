@@ -17,6 +17,15 @@ Router.route('/', {
 	}
 });
 
+Router.route('/access', {
+	name: 'access',
+	action: function () {
+		this.layout('AccessLayout');
+		this.render('Access');
+		SEO.set({ title: 'Access - ' + Meteor.App.NAME });
+	}
+});
+
 Router.route('/droplogs', {
 	name: 'droplogs-list',
 	action: function () {
