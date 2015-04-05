@@ -26,6 +26,7 @@ Router.route('/', {
 	}
 });
 
+// test route
 Router.route('/user/8g47', {
 	name: 'user-profile',
 	action: function () {
