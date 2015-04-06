@@ -21,9 +21,19 @@ Template['Access'].events({
 		swapScreen('login');
 		return false;
 	},
+	// 
+	'click .btn-create-account': function() {
+		Session.set('createAccount', 'create');
+	},
+	'click .btn-sign-in': function() {
+		Session.set('signIn', 'signin');
+	},
+	'submit form': function(e) {
+		e.preventDefault();
+	}
 	// Social icons button events
 	'click .btn-facebook': function() {
-		return Meteor.loginWithFacebook({
+		Meteor.loginWithFacebook({
 			requestPermissions: ['email']
 		}, function(error) {
 			if (error) {
@@ -32,7 +42,7 @@ Template['Access'].events({
 		});
 	},
 	'click .btn-google': function() {
-		return Meteor.loginWithGoogle({
+		Meteor.loginWithGoogle({
 			requestPermissions: ['email']
 		}, function(error) {
 			if (error) {
@@ -41,7 +51,7 @@ Template['Access'].events({
 		});
 	},
 	'click .btn-twitter': function() {
-		return Meteor.loginWithTwitter(function(error) {
+		Meteor.loginWithTwitter(function(error) {
 			if (error) {
 				console.log(error.reason);
 			}
