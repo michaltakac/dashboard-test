@@ -11,14 +11,14 @@ Meteor.methods({
       }
     }, function(error, response) {
       if (error) {
-        return validateEmail(error);
+        validateEmail["return"](error);
       } else {
         if (response.data.result === "invalid" || response.data.result === "unknown") {
           validateEmail["return"]({
             error: "Sorry, your email was returned as invalid. Please try another address."
           });
         } else {
-          return validateEmail(true);
+          validateEmail["return"](true);
         }
       }
     });
