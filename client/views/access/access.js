@@ -59,9 +59,8 @@ Template['Access'].events({
 	},
 	// Form handlers
 	createAccountHandler: function() {
-		var createAccount, user;
-		createAccount = Session.get('createAccount');
-		user = {
+		var createAccount = Session.get('createAccount');
+		var user = {
 			email: $('[name="emailCreate"]').val(),
 			password: $('[name="passCreate"]').val()
 		};
@@ -70,9 +69,8 @@ Template['Access'].events({
 		} 
 	},
 	loginAccountHandler: function() {
-		var loginAccount, user;
-		loginAccount = Session.get('loginAccount');
-		user = {
+		var loginAccount = Session.get('loginAccount');
+		var user = {
 			email: $('[name="emailLogin"]').val(),
 			password: $('[name="passLogin"]').val()
 		};
