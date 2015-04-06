@@ -11,16 +11,16 @@
 							<div class="form-group">
 							<label for="exampleInputEmail1">Email address</label>
 							<i class="fa fa-envelope"></i>
-							<input type="email" class="form-control" id="exampleInputEmail1" >
+							<input type="email" name="emailAddress" class="form-control" id="exampleInputEmail1" >
 							</div>
 							<div class="form-group"> 
 							<label for="exampleInputPassword1">Password</label>
 							<i class="fa fa-lock"></i>
-							<input type="password" class="form-control" id="exampleInputPassword1" >
+							<input type="password" name="password" class="form-control" id="exampleInputPassword1" >
 							</div>
 							<div class="form-actions">
 							<label class="checkbox"> <input type="checkbox" class="uniform" value=""> Remember me</label>
-							<button type="submit" class="btn btn-danger">Submit</button>
+							<button type="submit" class="btn btn-danger btn-sign-in">Submit</button>
 							</div>
 						</form>
 						{{! SOCIAL LOGIN }}
@@ -60,26 +60,16 @@
 					<div class="login-box-plain">
 						<h2 class="bigintro">Register</h2>
 						<div class="divide-40"></div>
-						<form role="form">
-							<div class="form-group">
-							<label for="exampleInputName">Full Name</label>
-							<i class="fa fa-font"></i>
-							<input type="text" class="form-control" id="exampleInputName" >
-							</div>
-							<div class="form-group">
-							<label for="exampleInputUsername">Username</label>
-							<i class="fa fa-user"></i>
-							<input type="text" class="form-control" id="exampleInputUsername" >
-							</div>
+						<form role="form" id="create-account">
 							<div class="form-group">
 							<label for="exampleInputEmail1">Email address</label>
 							<i class="fa fa-envelope"></i>
-							<input type="email" class="form-control" id="exampleInputEmail1" >
+							<input type="email" name="emailAddress" class="form-control" id="exampleInputEmail1" placeholder="Never use your RuneScape email!">
 							</div>
 							<div class="form-group"> 
 							<label for="exampleInputPassword1">Password</label>
 							<i class="fa fa-lock"></i>
-							<input type="password" class="form-control" id="exampleInputPassword1" >
+							<input type="password" name="password" class="form-control" id="exampleInputPassword1" >
 							</div>
 							<div class="form-group"> 
 							<label for="exampleInputPassword2">Repeat Password</label>
@@ -88,7 +78,7 @@
 							</div>
 							<div class="form-actions">
 							<label class="checkbox"> <input type="checkbox" class="uniform" value=""> I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
-							<button type="submit" class="btn btn-success">Sign Up</button>
+							<button type="submit" class="btn btn-success btn-create-account">Sign Up</button>
 							</div>
 						</form>
 						{{! SOCIAL REGISTER }}
