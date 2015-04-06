@@ -30,7 +30,7 @@ Template['Access'].events({
 	},
 	'submit form': function(e) {
 		e.preventDefault();
-	}
+	},
 	// Social icons button events
 	'click .btn-facebook': function() {
 		Meteor.loginWithFacebook({
