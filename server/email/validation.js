@@ -7,7 +7,7 @@ Meteor.methods({
     HTTP.call("GET", "https://api.kickbox.io/v1/verify", {
       params: {
         email: address,
-        apikey: 2894f0efad058f7cc6cefbd6ae0012de54450235d61db7e7af6e05ac2e9af316
+        apikey: "2894f0efad058f7cc6cefbd6ae0012de54450235d61db7e7af6e05ac2e9af316"
       }
     }, function(error, response) {
       if (error) {
