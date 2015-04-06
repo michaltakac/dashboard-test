@@ -21,12 +21,12 @@ Template['Access'].events({
 		swapScreen('login');
 		return false;
 	},
-	// 
+	// Using sessions for form submitting
 	'click .btn-create-account': function() {
 		Session.set('createAccount', 'create');
 	},
 	'click .btn-sign-in': function() {
-		Session.set('signIn', 'signin');
+		Session.set('loginAccount', 'signin');
 	},
 	'submit form': function(e) {
 		e.preventDefault();
@@ -54,6 +54,33 @@ Template['Access'].events({
 		Meteor.loginWithTwitter(function(error) {
 			if (error) {
 				console.log(error.reason);
+			}
+		});
+	},
+	// Form handlers
+	createAccountHandler: function() {
+		var createAccount, user;
+		createAccount = Session.get('createAccount');
+		user = {
+			email: $('[name="emailCreate"]').val(),
+			password: $('[name="passCreate"]').val()
+		};
+		if (createAccount === "create") {
+			Meteor.call('validateEmailAddress', user.email, function(error, response) {});
+		} 
+	},
+	loginAccountHandler: function() {
+		var loginAccount, user;
+		loginAccount = Session.get('loginAccount');
+		user = {
+			email: $('[name="emailLogin"]').val(),
+			password: $('[name="passLogin"]').val()
+		};
+		Meteor.loginWithPassword(user.email, user.password, function(error) {
+			if (error) {
+				alert(error.reason);
+			} else {
+				$('.modal-backdrop').hide();
 			}
 		});
 	}
