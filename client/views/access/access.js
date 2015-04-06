@@ -78,7 +78,17 @@ Template['Access'].events({
 			if (error) {
 				alert(error.reason);
 			} else {
-				$('.modal-backdrop').hide();
+				if (response.error) {
+					alert(response.error);
+				} else {
+					Accounts.createUser(user, function(error) {
+						if (error) {
+							alert(error.reason);
+						} else {
+							$('.modal-backdrop').hide();
+						}
+					});
+				}
 			}
 		});
 	}
