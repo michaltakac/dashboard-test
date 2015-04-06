@@ -1,8 +1,4 @@
 // Social networks - Login settings
-createServiceConfiguration('facebook', 'Insert your appId here.', 'Insert your secret here.')
-createServiceConfiguration('google', 'Insert your clientId here.', 'Insert your secret here.')
-createServiceConfiguration('twitter', 'Insert your consumerKey here.', 'Insert your secret here.')
-
 createServiceConfiguration = function(service, clientId, secret) {
   ServiceConfiguration.configurations.remove({
     service: service
@@ -33,3 +29,7 @@ createServiceConfiguration = function(service, clientId, secret) {
       ServiceConfiguration.configurations.insert(config.generic);
   }
 };
+
+//createServiceConfiguration('facebook', 'Insert your appId here.', 'Insert your secret here.');
+//createServiceConfiguration('google', 'Insert your clientId here.', 'Insert your secret here.');
+//createServiceConfiguration('twitter', 'Insert your consumerKey here.', 'Insert your secret here.');
