@@ -11,17 +11,17 @@ Meteor.methods({
       }
     }, function(error, response) {
       if (error) {
-        validateEmail["return"](error);
+        return validateEmail["return"](error);
       } else {
         if (response.data.result === "invalid" || response.data.result === "unknown") {
           validateEmail["return"]({
             error: "Sorry, your email was returned as invalid. Please try another address."
           });
         } else {
-          validateEmail["return"](true);
+          return validateEmail["return"](true);
         }
       }
     });
-    validateEmail.wait();
+    return validateEmail.wait();
   }
 });
