@@ -9,6 +9,7 @@ Template['Access'].helpers({
 		if (createAccount === "create") {
 			Meteor.call('validateEmailAddress', user.email, function(error, response) {});
 		} 
+		console.log(user.email)
 	},
 	loginAccountHandler: function() {
 		var loginAccount = Session.get('loginAccount');
