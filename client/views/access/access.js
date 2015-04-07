@@ -7,7 +7,23 @@ Template['Access'].helpers({
 			password: $('[name="passCreate"]').val()
 		};
 		if (createAccount === "create") {
-			Meteor.call('validateEmailAddress', user.email, function(error, response) {});
+			Meteor.call('validateEmailAddress', user.email, function(error, response) {
+				if (error) {
+					alert(error.reason);
+				} else {
+					if (response.error) {
+						alert(response.error);
+					} else {
+						Accounts.createUser(user, function(error) {
+							if (error) {
+								alert(error.reason);
+							} else {
+								console.log('successfuly created account!')
+							}
+						});
+					}
+				}
+			});
 		} 
 		console.log(user.email)
 	},
@@ -21,17 +37,7 @@ Template['Access'].helpers({
 			if (error) {
 				alert(error.reason);
 			} else {
-				if (response.error) {
-					alert(response.error);
-				} else {
-					Accounts.createUser(user, function(error) {
-						if (error) {
-							alert(error.reason);
-						} else {
-							$('.modal-backdrop').hide();
-						}
-					});
-				}
+				console.log('successfuly logged in!')
 			}
 		});
 	}
@@ -59,9 +65,11 @@ Template['Access'].events({
 	// Using sessions for form submitting
 	'click .btn-create-account': function() {
 		Session.set('createAccount', 'create');
+		console.log(Session.get('createAccount'))
 	},
 	'click .btn-sign-in': function() {
 		Session.set('loginAccount', 'signin');
+		console.log(Session.get('loginAccount'))
 	},
 	'submit form': function(e) {
 		e.preventDefault();
