@@ -19,8 +19,8 @@ UI.registerHelper('currentRoute', (route) ->
 
 UI.registerHelper('userIdentity', (userId) ->
   getUser = Meteor.users.findOne({_id: userId})
-  if getUser.emails
-    getUser.emails[0].address
+  if getUser.email
+    getUser.email[0].address
   else if getUser.services
     services = getUser.services
     getService = switch
