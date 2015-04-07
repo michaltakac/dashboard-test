@@ -30,7 +30,7 @@ Meteor.methods({
       email: String,
       name: String
     });
-    SSR.compileTemplate('welcomeEmail', Assets.getText('email/welcome-email.html'));
+    SSR.compileTemplate('welcomeEmail', Assets.getText('templates/email/welcome-email.html'));
     emailTemplate = SSR.render('welcomeEmail', {
       email: userData.email,
       name: userData.name !== "" ? userData.name : null,
