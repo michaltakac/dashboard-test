@@ -9,6 +9,11 @@ Meteor.App = {
   DESCRIPTION: 'RuneScape professional tracking system.'
 };
 
+swapScreen = function (id) {
+    $('.visible').removeClass('visible animated fadeInUp');
+    $('#'+id).addClass('visible animated fadeInUp');
+}
+
 getViewPort = function () {
     var e = window, a = 'inner';
     if (!('innerWidth' in window)) {

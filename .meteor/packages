@@ -5,7 +5,9 @@
 
 meteor-platform
 less
+coffeescript
 jquery
+insecure
 http
 email
 meteorhacks:ssr

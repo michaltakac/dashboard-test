@@ -1,13 +1,3 @@
-if (Meteor.isClient) {
-	// Keep showing the launch screen on mobile devices until we have loaded
-	// the app's data
-	dataReadyHold = LaunchScreen.hold();
-
-	// Show the loading screen on desktop
-	//Router.onBeforeAction('loading', {except: ['join', 'signin']});
-	//Router.onBeforeAction('dataNotFound', {except: ['join', 'signin']});
-}
-
 Router.route('/access', {
 	name: 'access',
 	action: function () {
@@ -17,21 +7,6 @@ Router.route('/access', {
 	}
 });
 
-Router.route('/dashboard', {
-	name: 'dashboard',
-	action: function () {
-		this.layout('MainLayout');
-		this.render('dashboard');
-		SEO.set({ title: 'Dashboard - ' + Meteor.App.NAME });
-	},
-	waitOn: function() {
-		return Meteor.subscribe('userData');
-	},
-	onBeforeAction: function() {
-		Session.set('currentRoute', 'dashboard');
-		return this.next();
-	}
-});
 
 // test route
 Router.route('/dashboard/user/8g47', {
