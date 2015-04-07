@@ -77,3 +77,7 @@ Router.route('/dashboard/calendar', {
 		SEO.set({ title: 'Calendar - ' + Meteor.App.NAME });
 	}
 });
+
+Router.plugin('ensureSignedIn', {
+  except: ['access']
+});
