@@ -7,6 +7,8 @@ meteor-platform
 less
 jquery
 underscore
+useraccounts:core
+useraccounts:bootstrap
 accounts-password
 aldeed:collection2
 aldeed:autoform
