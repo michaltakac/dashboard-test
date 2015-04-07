@@ -23,6 +23,13 @@ Router.route('/dashboard', {
 		this.layout('MainLayout');
 		this.render('dashboard');
 		SEO.set({ title: 'Dashboard - ' + Meteor.App.NAME });
+	},
+	waitOn: function() {
+		return Meteor.subscribe('userData');
+	},
+	onBeforeAction: function() {
+		Session.set('currentRoute', 'dashboard');
+		return this.next();
 	}
 });
 
