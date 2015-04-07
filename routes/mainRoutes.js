@@ -17,7 +17,7 @@ Router.route('/access', {
 	}
 });
 
-Router.route('/', {
+Router.route('/dashboard', {
 	name: 'dashboard',
 	action: function () {
 		this.layout('MainLayout');
@@ -27,7 +27,7 @@ Router.route('/', {
 });
 
 // test route
-Router.route('/user/8g47', {
+Router.route('/dashboard/user/8g47', {
 	name: 'user-profile',
 	action: function () {
 		this.layout('MainLayout');
@@ -36,7 +36,7 @@ Router.route('/user/8g47', {
 	}
 });
 
-Router.route('/droplogs', {
+Router.route('/dashboard/droplogs', {
 	name: 'droplogs-list',
 	action: function () {
 		this.layout('MainLayout');
@@ -45,7 +45,7 @@ Router.route('/droplogs', {
 	}
 });
 
-Router.route('/droplogs/:_id', {
+Router.route('/dashboard/droplogs/:_id', {
 	name: 'droplog',
 	// subscribe to todos before the page is rendered but don't wait on the
 		// subscription, we'll just render the items as they arrive
@@ -69,7 +69,7 @@ Router.route('/droplogs/:_id', {
 	}
 });
 
-Router.route('/calendar', {
+Router.route('/dashboard/calendar', {
 	name: 'calendar',
 	action: function () {
 		this.layout('MainLayout');
