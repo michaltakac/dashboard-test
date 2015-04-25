@@ -45,7 +45,7 @@ Router.route('/dashboard/droplogs', {
 	}
 });
 
-Router.route('/dashboard/droplogs/:_id', {
+Router.route('/dashboard/droplogs/xxx', {
 	name: 'droplog',
 	// subscribe to todos before the page is rendered but don't wait on the
 		// subscription, we'll just render the items as they arrive
